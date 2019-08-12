@@ -1,4 +1,4 @@
-FROM sentry:9.1.1
+FROM sentry:9.1.2
 RUN PSYCOPG=$(pip freeze | grep psycopg2) \
         && pip uninstall -y $PSYCOPG \
         && pip install --no-binary :all: $PSYCOPG
